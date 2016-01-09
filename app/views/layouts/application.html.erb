@@ -8,16 +8,39 @@
 </head>
 <body>
 
-<% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
+  <nav>
+    <div class="nav_right">
+      <ul>
+        <li><i class="fa fa-ticket fa-2x"></i></li>
+        <li>Search Function</li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <ul>
+        <li>Deals</li>
+        <li>
+          <% if user_signed_in? %>
+            <p>Welcome back: <%= current_user.email %></p>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+          <% else %>
+            <%= link_to "Sign In", new_user_session_path %>
+          <% end %>
+        </li>
+        <li><i class="fa fa-shopping-cart fa-2x"></i></li>
+      </ul>
+    </div>
+  </nav>
 
-<%= yield %>
+  <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
 
-<%= debug(params) if Rails.env.development? %>
+  <%= yield %>
+
+  <%= debug(params) if Rails.env.development? %>
 
 </body>
 </html>
