@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  act_id: 1
+  event_id: 1
+  category: MyString
+
+two:
+  act_id: 1
+  event_id: 1
+  category: MyString

@@ -1,0 +1,11 @@
+class CreateGenres < ActiveRecord::Migration
+  def change
+    create_table :genres do |t|
+      t.integer :act_id
+      t.integer :event_id
+      t.string :category
+
+      t.timestamps null: false
+    end
+  end
+end
