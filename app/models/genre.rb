@@ -1,5 +1,6 @@
 class Genre < ActiveRecord::Base
 
-  has_many :events
-
+  belongs_to :event
+  has_many :acts, :through => :event
+  has_many :venues, :through => :event
 end
