@@ -1,0 +1,9 @@
+<h1>Events#index</h1>
+
+<% @events.each do |event| %>
+  <%= event.act.act_name %>
+  <br>
+  <%= event.venue.venue_name %>
+  <br>
+  <%= event.event_start_time.strftime('%H:%M on %d %^b %Y') %>
+<% end %>
