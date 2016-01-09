@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  act_id: 1
+  venue_id: 1
+  event_start_time: 
+  event_end_time: 
+  event_details: MyText
+  event_price: 9.99
+
+two:
+  act_id: 1
+  venue_id: 1
+  event_start_time: 
+  event_end_time: 
+  event_details: MyText
+  event_price: 9.99
