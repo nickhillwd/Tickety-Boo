@@ -6,25 +6,25 @@
       <div class="panel-heading">View All Categories</div>
         <h3><%= link_to "#{@sport_title.category}", genre_path(@sport_title.id) %></h3>
         <% @sport.first(4).each do |sport| %>
-        <%= sport.event.event_details %>
+        <%= link_to "#{sport.event.event_details}", event_path(sport.event.id) %>
         <br>
       <% end %>
 
       <h3><%= link_to "#{@music_title.category}", genre_path(@music_title.id) %></h3>
         <% @music.first(4).each do |music| %>
-        <%= music.event.event_details %>
+        <%= link_to "#{music.event.event_details}", event_path(music.event.id) %>
         <br>
       <% end %>
 
       <h3><%= link_to "#{@comedy_title.category}", genre_path(@comedy_title.id) %></h3>
         <% @comedy.first(4).each do |comedy| %>
-        <%= comedy.event.event_details %>
+        <%= link_to "#{comedy.event.event_details}", event_path(comedy.event.id) %>
         <br>
       <% end %>
 
       <h3><%= link_to "#{@theatre_title.category}", genre_path(@theatre_title.id) %></h3>
         <% @theatre.first(4).each do |theatre| %>
-        <%= theatre.event.event_details %>
+        <%= link_to "#{theatre.event.event_details}", event_path(theatre.event.id) %>
         <br>
       <% end %>
     </div>
