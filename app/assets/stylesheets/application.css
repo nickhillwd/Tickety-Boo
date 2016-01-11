@@ -85,7 +85,7 @@
    display:inline-block;
    vertical-align: top; /* default is set to bottom */
    margin-right:-4px; /* using inline block adds a 4px right-hand margin by default, REMOVE! */
-   padding: 0 10px;
+   padding: 0 5.6%;
    box-sizing: border-box;
  }
 
@@ -142,8 +142,7 @@
  .panel {
    margin-bottom: 15px;
    background-color: #fff;
-   max-height: 400px;
-   overflow:auto;
+   max-height: 600px;
  }
 
  .panel-heading {
@@ -162,6 +161,8 @@
  }
 
  .panel-primary .panel-heading {
+   position: inherit fixed;
+   top: 0;
    background-color: #1D27C9;
  }
 
