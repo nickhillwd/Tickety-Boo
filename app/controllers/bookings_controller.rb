@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
 
   def new
     @event = Event.find_by(params[:id])
+    @booking = Booking.new
   end
 
 end
