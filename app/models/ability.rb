@@ -18,8 +18,9 @@ class Ability
       can :manage, :all
     else
       can :read, [Event, Act, Venue]
-      can :create, Comment
-      can :update, Comment
+      can :create, Booking
+      #can :create, Comment
+      #can :update, Comment
     end
 
     # The first argument to `can` is the action you are giving the user

@@ -1,7 +1,7 @@
 <h1>Events#index</h1>
 
 <section class="row">
-  <div class="grid grid-5">
+  <div class="grid grid-6">
     <div class="panel panel-primary">
       <div class="panel-heading">View All Categories</div>
         <h3><%= link_to "#{@sport_title.category}", genre_path(@sport_title.id) %></h3>
@@ -30,7 +30,7 @@
     </div>
   </div>
 
-  <div class="grid grid-5">
+  <div class="grid grid-6">
     <div class="panel panel-primary">
       <div class="panel-heading">View All Events</div>
         <% @events.each do |event| %>

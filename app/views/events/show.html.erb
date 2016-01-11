@@ -1,15 +1,15 @@
 <h1><%= @event.event_details %></h1>
 
 <section class="row">
-  <div class="grid grid-5">
+  <div class="grid grid-6">
     <div class="panel panel-primary">
       <%= @event.act.act_image %>
       <p>act image goes here</p>
-      <h3>Book This event Now!</h3>
+      <h3><%= link_to "Book This Event Now!", current_user ? new_booking_path : new_user_session_path %></h3>
     </div>
   </div>
 
-  <div class="grid grid-5">
+  <div class="grid grid-6">
     <div class="panel panel-primary">
       <%= @event.act.act_name %>
       <br>
