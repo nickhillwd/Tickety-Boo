@@ -4,15 +4,29 @@
   <div class="grid grid-5">
     <div class="panel panel-primary">
       <div class="panel-heading">View All Categories</div>
-        <% @events.each do |event| %>
-          <%= link_to "#{event.act.act_name}", act_path(event.act.id) %>
-          <br>
-          <%= link_to "#{event.venue.venue_name}", venue_path(event.venue.id) %>
-          <br>
-          <%= event.event_start_time.strftime('%H:%M on %d %^b %Y') %>
-          <br>
-          <br>
-        <% end %>
+        <h3><%= link_to "#{@sport_title.category}", genre_path(@sport_title.id) %></h3>
+        <% @sport.first(4).each do |sport| %>
+        <%= sport.event.event_details %>
+        <br>
+      <% end %>
+
+      <h3><%= link_to "#{@music_title.category}", genre_path(@music_title.id) %></h3>
+        <% @music.first(4).each do |music| %>
+        <%= music.event.event_details %>
+        <br>
+      <% end %>
+
+      <h3><%= link_to "#{@comedy_title.category}", genre_path(@comedy_title.id) %></h3>
+        <% @comedy.first(4).each do |comedy| %>
+        <%= comedy.event.event_details %>
+        <br>
+      <% end %>
+
+      <h3><%= link_to "#{@theatre_title.category}", genre_path(@theatre_title.id) %></h3>
+        <% @theatre.first(4).each do |theatre| %>
+        <%= theatre.event.event_details %>
+        <br>
+      <% end %>
     </div>
   </div>
 
