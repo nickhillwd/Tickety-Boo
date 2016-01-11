@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :venues
   resources :acts
   resources :genres
+  resources :bookings
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

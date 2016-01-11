@@ -13,8 +13,11 @@ class EventsController < ApplicationController
     @theatre_title = Genre.find_by({category: "Theatre & The Arts"})
     @theatre = Genre.where("category like ?", "Theatre & The Arts")
     # binding.pry
-
     @events = Event.all
+  end
+
+  def show
+    @event = Event.find(params[:id])
   end
 
 end

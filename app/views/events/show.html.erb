@@ -1,0 +1,26 @@
+<h1><%= @event.event_details %></h1>
+
+<section class="row">
+  <div class="grid grid-5">
+    <div class="panel panel-primary">
+      <%= @event.act.act_image %>
+      <p>act image goes here</p>
+      <h3>Book This event Now!</h3>
+    </div>
+  </div>
+
+  <div class="grid grid-5">
+    <div class="panel panel-primary">
+      <%= @event.act.act_name %>
+      <br>
+      <br>
+      <%= @event.venue.venue_name %>
+      <br>
+      <br>
+      <%= @event.event_start_time.strftime('%H:%M on %d %^b %Y') %>
+      <br>
+      <br>
+      <%= @event.act.act_details %>
+    </div>
+  </div>
+</section>

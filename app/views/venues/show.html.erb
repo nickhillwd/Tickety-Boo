@@ -1,3 +1,23 @@
-<%= @venue.venue_name %>
+<h1><%= @venue.venue_name %></h1>
 
-<h1>venue show page</h1>
+<section class="row">
+  <div class="grid grid-5">
+    <div class="panel panel-primary">
+      <%= @venue.venue_image %>
+      <p>Venue image goes here</p>
+      <h3>See what else is on at <%= @venue.venue_name %></h3>
+    </div>
+  </div>
+
+  <div class="grid grid-5">
+    <div class="panel panel-primary">
+      <%= @venue.venue_name %>
+      <br>
+      <br>
+      <%= @venue.venue_location %>
+      <br>
+      <br>
+      <%= @venue.venue_details %>
+    </div>
+  </div>
+</section>
