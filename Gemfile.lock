@@ -89,6 +89,7 @@ GEM
     multi_json (1.11.2)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
+    normalize-rails (3.0.3)
     orm_adapter (0.5.0)
     pry (0.10.3)
       coderay (~> 1.1.0)
@@ -181,6 +182,7 @@ DEPENDENCIES
   font-awesome-rails
   jbuilder (~> 2.0)
   jquery-rails
+  normalize-rails
   pry-byebug
   pry-rails
   rails (= 4.2.4)

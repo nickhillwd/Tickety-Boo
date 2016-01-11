@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'normalize-rails'
+
 gem 'font-awesome-rails'
 #devise gem
 gem 'devise'

@@ -14,3 +14,74 @@
  *= require_self
  *= require font-awesome
  */
+
+ /*------ GRID FRAMEWORK ------*/
+
+ .container {
+   width:90%;
+   margin: 0 auto;
+ }
+
+ .row {
+   display:block;
+   margin: 0 -10px;
+ }
+
+ .grid {
+   display:inline-block;
+   vertical-align: top; /* default is set to bottom */
+   margin-right:-4px; /* using inline block adds a 4px right-hand margin by default, REMOVE! */
+   padding: 0 10px;
+   box-sizing: border-box;
+ }
+
+ .grid-1 {
+   width: 8.333333%;
+ }
+
+ .grid-2 {
+   width:16.666666%;
+ }
+
+ .grid-3 {
+   width: 25%;
+ }
+
+ .grid-4 {
+   width: 33.333333%;
+ }
+
+ .grid-5 {
+   width:41.666666%;
+ }
+
+ .grid-6 {
+   width:50%;
+ }
+
+ .grid-7 {
+   width:58.333333%;
+ }
+
+ .grid-8 {
+   width:66.666666%;
+ }
+
+ .grid-9 {
+   width:75%;
+ }
+
+ .grid-10 {
+   width:83.333333%;
+ }
+
+ .grid-11 {
+   width:91.666666%;
+ }
+
+ .grid-12 {
+   width:100%;
+ }
+
+
+

@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
 
+  get 'acts/index'
+
+  get 'acts/show'
+
+  get 'venues/index'
+
   root to: 'events#index'
 
   resources :events
+  resources :venues
+  resources :acts
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

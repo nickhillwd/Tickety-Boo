@@ -1,10 +1,12 @@
 <h1>Events#index</h1>
 
 <% @events.each do |event| %>
-  <%= event.act.act_name %>
+  <%= link_to "#{event.act.act_name}", act_path(event.act.id) %>
   <br>
-  <%= event.venue.venue_name %>
+  <%= link_to "#{event.venue.venue_name}", venue_path(event.venue.id) %>
   <br>
   <%= event.event_start_time.strftime('%H:%M on %d %^b %Y') %>
+  <br>
+  <br>
 <% end %>
 
