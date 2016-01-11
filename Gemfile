@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'stripe'
+
 gem 'cancancan'
 
 gem 'normalize-rails'
