@@ -1,0 +1,20 @@
+<section class="row">
+  <div class="grid grid-12">
+    <div class="panel panel-primary">
+      <h1><%= current_user.email %>: Your Current Bookings</h1>
+      <% @bookings.each do |booking| %>
+        <%= booking.event.act.act_name %>
+        <br>
+        <%= booking.event.event_details %>
+        <br>
+        <%= booking.event.event_start_time.strftime('%H:%M on %d %^b %Y') %>
+        <br>
+        <%= booking.event.venue.venue_name %>
+        <br>
+        <%= booking.event.venue.venue_location %>
+        <br>
+        <br>
+      <% end %>    
+    </div>
+  </div>
+</section>
