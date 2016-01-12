@@ -2,9 +2,89 @@
   <div class="grid grid-6">
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h3>Admin Panel<h3>
+        <h3>Events<h3>
       </div>
-      
+      <% @events.each do |event| %>
+        <%= event.event_details %>
+        <%= link_to "Edit", edit_event_path(event.id) %>
+        <br>
+        <br>
+      <% end %>
     </div>
   </div>
+
+  <div class="grid grid-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3>Venues<h3>
+      </div>
+      <% @venues.each do |venue| %>
+        <%= venue.venue_name %>
+        <%= link_to "Edit", edit_venue_path(venue.id) %>
+        <br>
+        <br>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="grid grid-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3>Bookings<h3>
+      </div>
+      <% @bookings.each do |booking| %>
+        <%= booking.user.email %>
+        <br>
+        <%= booking.event.event_details %>
+        <br>
+        <br>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="grid grid-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3>Users<h3>
+      </div>
+      <% @users.each do |user| %>
+        <%= user.email %>
+        <br>
+        <% if user.role == "admin" %>
+          <%= "Admin User" %>
+        <% end %>
+        <br>
+        <br>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="grid grid-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3>Acts<h3>
+      </div>
+      <% @acts.each do |act| %>
+        <%= act.act_name %>
+        <%= link_to "Edit", edit_act_path(act.id) %>
+        <br>
+        <br>
+      <% end %>
+    </div>
+  </div>
+
 </section> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

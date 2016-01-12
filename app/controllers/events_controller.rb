@@ -14,6 +14,10 @@ class EventsController < ApplicationController
     
   end
 
+  def edit
+    
+  end
+
   def search
     
       if params[:search]
