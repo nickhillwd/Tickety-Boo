@@ -1,3 +1,17 @@
-<% @genre.each do |event| %>
-  <%= event.event.event_details %>
-<% end %>
+<section class="row">
+  <div class="grid grid-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading">View All Events</div>
+        <% @genre.events.each do |event| %>
+          <%= link_to "#{event.act.act_name}", act_path(event.act.id) %>
+          <br>
+          <%= link_to "#{event.venue.venue_name}", venue_path(event.venue.id) %>
+          <br>
+          <%= event.event_start_time.strftime('%H:%M on %d %^b %Y') %>
+          <br>
+          <br>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

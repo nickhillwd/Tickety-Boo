@@ -3,7 +3,6 @@ class GenresController < ApplicationController
   end
 
   def show
-    @category = Genre.where("id like ?", "#{params[:id]}")
-    @genre = Genre.find_by("category like ?", "#{@category.category}")
+    @genre = Genre.find(params[:id])
   end
 end
