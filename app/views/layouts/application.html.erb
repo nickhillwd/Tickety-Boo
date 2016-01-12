@@ -34,7 +34,14 @@
             <% end %> 
         </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
+
+  <div class="container">
+    <% if admin? %>
+      <%= link_to "Admin Panel", admin_index_path %>
+    <% end %>
+  </div>
 
   <div class="container">
     <% if notice %>

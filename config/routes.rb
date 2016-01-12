@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'admin/index'
+
   get 'bookings/all'
 
   get 'search' => 'events#search'
