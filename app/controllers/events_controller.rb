@@ -15,9 +15,28 @@ class EventsController < ApplicationController
   end
 
   def edit
+    @event = Event.find(params[:id])
     @event = Event.new
     @acts = Act.all
     @venues = Venue.all
+  end
+
+  def update
+    event = Event.find(params[:id])
+    event.update(event_params)
+    redirect_to admin_index_path
+  end
+
+  def new
+    @event = Event.new
+    @acts = Act.all
+    @venues = Venue.all
+  end
+
+  def create
+    event_new = Event.new(event_params)
+    event_new.save
+    redirect_to admin_index_path
   end
 
   def search
@@ -31,5 +50,11 @@ class EventsController < ApplicationController
         @event = Event.all.order("event_details DESC")
       end
   end
+
+  private
+
+    def event_params
+      params.require(:event).permit(:event_details, :event_price, :act_id, :venue_id, :event_start_time, :event_end_time)
+    end
 
 end

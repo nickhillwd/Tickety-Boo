@@ -19,7 +19,7 @@
  /*------ HEADER IMAGE ------*/
 
  .header-image {
-   height: 300px;
+   height: 350px;
    background-image: url("header_image.jpg");
    background-repeat: no-repeat;
    background-position: center;
@@ -144,7 +144,8 @@
  .panel {
    margin-bottom: 15px;
    background-color: #fff;
-   max-height: 600px;
+   max-height: 700px;
+   overflow:auto;
  }
 
  .panel-heading {
