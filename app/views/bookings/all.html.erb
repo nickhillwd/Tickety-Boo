@@ -3,13 +3,13 @@
     <div class="panel panel-primary">
       <h1><%= current_user.email %>: Your Current Bookings</h1>
       <% @bookings.each do |booking| %>
-        <%= booking.event.act.act_name %>
+        <%= link_to "#{booking.event.act.act_name}", act_path(booking.event.act.id) %>
         <br>
-        <%= booking.event.event_details %>
+        <%= link_to "#{booking.event.event_details}", event_path(booking.event.id) %>
         <br>
         <%= booking.event.event_start_time.strftime('%H:%M on %d %^b %Y') %>
         <br>
-        <%= booking.event.venue.venue_name %>
+        <%= link_to "#{booking.event.venue.venue_name}", venue_path(booking.event.venue.id) %>
         <br>
         <%= booking.event.venue.venue_location %>
         <br>
