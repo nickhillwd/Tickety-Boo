@@ -3,14 +3,14 @@ class BookingsController < ApplicationController
   load_and_authorize_resource
 
   def new
-
-    @event = Event.find_by(params[:id])
+    @event = Event.find(params[:event_id])
     @booking = Booking.new
   end
 
   def create
     new_booking = Booking.new(booking_params)
     new_booking.save
+  
     @amount = ((new_booking.event.event_price)*100).to_i
 
     customer = Stripe::Customer.create(

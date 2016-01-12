@@ -12,11 +12,12 @@ Rails.application.routes.draw do
 
   root to: 'events#index'
 
-  resources :events
+  resources :events do 
+    resources :bookings
+  end
   resources :venues
   resources :acts
   resources :genres
-  resources :bookings
   resources :charges
 
   devise_for :users

@@ -1,8 +1,10 @@
 class EventsController < ApplicationController
   
   def index
+    # @genres = Genre.all
+
     @sport_title = Genre.find_by({category: "Sport"})
-    @sport = Genre.where("category like ?", "Sport")
+    @sport = Genre.where({category: "Sport"}).first(4)
 
     @music_title = Genre.find_by({category: "Music"})
     @music = Genre.where("category like ?", "Music")
@@ -18,6 +20,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    #binding.pry
   end
 
 end

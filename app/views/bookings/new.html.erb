@@ -1,5 +1,5 @@
 <div class= "grid grid-6">
-  <%= form_for @booking do |f| %>
+  <%= form_for [@event, @booking] do |f| %>
     <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.hidden_field :event_id, value: @event.id %>
     <br>
@@ -13,6 +13,8 @@
     <%= @event.venue.venue_location %>
     <br>
     <%= @event.event_start_time.strftime('%H:%M on %d %^b %Y') %>
+    <br>
+    £<%= @event.event_price %>
     <br>
     <br>
       <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"

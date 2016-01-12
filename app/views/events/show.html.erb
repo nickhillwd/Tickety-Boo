@@ -5,7 +5,7 @@
     <div class="panel panel-primary">
       <%= @event.act.act_image %>
       <p>act image goes here</p>
-      <h3><%= link_to "Book This Event Now!", current_user ? new_booking_path : new_user_session_path %></h3>
+      <h3><%= link_to "Book This Event Now!", current_user ? new_event_booking_path(@event) : new_user_session_path %></h3>
     </div>
   </div>
 
@@ -18,6 +18,9 @@
       <br>
       <br>
       <%= @event.event_start_time.strftime('%H:%M on %d %^b %Y') %>
+      <br>
+      <br>
+      £<%= @event.event_price %>
       <br>
       <br>
       <%= @event.act.act_details %>

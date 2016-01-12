@@ -5,7 +5,7 @@
     <div class="panel panel-primary">
       <div class="panel-heading">View All Categories</div>
         <h3><%= link_to "#{@sport_title.category}", genre_path(@sport_title.id) %></h3>
-        <% @sport.first(4).each do |sport| %>
+        <% @sport.each do |sport| %>
         <%= link_to "#{sport.event.event_details}", event_path(sport.event.id) %>
         <br>
       <% end %>
