@@ -3,30 +3,28 @@
 <section class="row">
   <div class="grid grid-6">
     <div class="panel panel-primary">
-      <div class="panel-heading">View All Categories</div>
-        <h3><%= link_to "#{@sport_title.category}", genre_path(@sport_title.id) %></h3>
-        <% @sport.each do |sport| %>
-        <%= link_to "#{sport.event.event_details}", event_path(sport.event.id) %>
+      <div class="panel-heading"><%= link_to "View All Categories", genres_path %></div>
+        <h3><%= @genres.first.title %></h3>
+        <% @genres.first.events.first(4).each do |event| %>
+          <%= event.event_details %>
+          <br>
+        <% end %>
         <br>
-      <% end %>
-
-      <h3><%= link_to "#{@music_title.category}", genre_path(@music_title.id) %></h3>
-        <% @music.first(4).each do |music| %>
-        <%= link_to "#{music.event.event_details}", event_path(music.event.id) %>
-        <br>
-      <% end %>
-
-      <h3><%= link_to "#{@comedy_title.category}", genre_path(@comedy_title.id) %></h3>
-        <% @comedy.first(4).each do |comedy| %>
-        <%= link_to "#{comedy.event.event_details}", event_path(comedy.event.id) %>
-        <br>
-      <% end %>
-
-      <h3><%= link_to "#{@theatre_title.category}", genre_path(@theatre_title.id) %></h3>
-        <% @theatre.first(4).each do |theatre| %>
-        <%= link_to "#{theatre.event.event_details}", event_path(theatre.event.id) %>
-        <br>
-      <% end %>
+        <h3><%= @genres.second.title %></h3>
+        <% @genres.second.events.first(4).each do |event| %>
+          <%= event.event_details %>
+          <br>
+        <% end %>
+        <h3><%= @genres.third.title %></h3>
+        <% @genres.third.events.first(4).each do |event| %>
+          <%= event.event_details %>
+          <br>
+        <h3><%= @genres[3].title %></h3>
+        <% @genres[3].events.first(4).each do |event| %>
+          <%= event.event_details %>
+          <br>
+        <% end %>
+        <% end %>
     </div>
   </div>
 

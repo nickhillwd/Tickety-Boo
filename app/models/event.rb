@@ -5,6 +5,6 @@ class Event < ActiveRecord::Base
   has_many :bookings
   has_many :users, :through => :bookings
   has_many :event_genres
-  has_many :genres, :through => :event_genre
+  has_many :genres, :through => :event_genres
 
 end
