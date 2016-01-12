@@ -1,9 +1,11 @@
 <section class="row">
   <div class="grid grid-12">
     <div class="panel panel-primary">
-      <div class="panel-heading">View All Events</div>
+      <div class="panel-heading"><%= "#{@genre.title}" %></div>
         <% @genre.events.each do |event| %>
           <%= link_to "#{event.act.act_name}", act_path(event.act.id) %>
+          <br>
+          <%= link_to "#{event.event_details}", event_path(event.id) %>
           <br>
           <%= link_to "#{event.venue.venue_name}", venue_path(event.venue.id) %>
           <br>
