@@ -1,5 +1,5 @@
 class DropGenreTable < ActiveRecord::Migration
   def change
-    drop_table :genre
+    drop_table :genres
   end
 end

@@ -97,23 +97,29 @@
 # Event.create(act_id: 66,venue_id: 14,event_start_time: "2016-06-20 11:00",event_end_time: "2016-06-20 16:00", event_price: 45, event_details: 'Europe\'s Strongest Man')
 
 # Genre.delete_all
-# Genre.create(act_id: 50,event_id: 4,category: 'Music')
-# Genre.create(act_id: 51,event_id: 5,category: 'Music')
-# Genre.create(act_id: 52,event_id: 6,category: 'Music')
-# Genre.create(act_id: 53,event_id: 7,category: 'Music')
-# Genre.create(act_id: 54,event_id: 8,category: 'Music')
-# Genre.create(act_id: 55,event_id: 9,category: 'Music')
-# Genre.create(act_id: 56,event_id: 10,category: 'Music')
-# Genre.create(act_id: 57,event_id: 11,category: 'Sport')
-# Genre.create(act_id: 58,event_id: 12,category: 'Sport')
-# Genre.create(act_id: 59,event_id: 13,category: 'Music')
-# Genre.create(act_id: 60,event_id: 14,category: 'Music')
-# Genre.create(act_id: 61,event_id: 15,category: 'Sport')
-# Genre.create(act_id: 62,event_id: 16,category: 'Sport')
-# Genre.create(act_id: 63,event_id: 17,category: 'Comedy')
-# Genre.create(act_id: 64,event_id: 18,category: 'Comedy')
-# Genre.create(act_id: 65,event_id: 19,category: 'Theatre & The Arts')
-# Genre.create(act_id: 66,event_id: 20,category: 'Sport')
+#   Genre.create(title:'Sport') 1
+#   Genre.create(title:'Music') 2
+#   Genre.create(title: 'Comedy') 3
+#   Genre.create(title: 'Theatre & The Arts') 4
+
+# EventGenre.delete_all
+#   EventGenre.create(event_id:4, genre_id:2)
+#   EventGenre.create(event_id:5,genre_id:2)
+#   EventGenre.create(event_id:6,genre_id:2)
+#   EventGenre.create(event_id:7,genre_id:2)
+#   EventGenre.create(event_id:8,genre_id:2)
+#   EventGenre.create(event_id:9,genre_id:2)
+#   EventGenre.create(event_id:10,genre_id:2)
+#   EventGenre.create(event_id:11,genre_id:1)
+#   EventGenre.create(event_id:12,genre_id:1)
+#   EventGenre.create(event_id:13,genre_id:2)
+#   EventGenre.create(event_id:14,genre_id:2)
+#   EventGenre.create(event_id:15,genre_id:1)
+#   EventGenre.create(event_id:16,genre_id:1)
+#   EventGenre.create(event_id:17,genre_id:3)
+#   EventGenre.create(event_id:18,genre_id:3)
+#   EventGenre.create(event_id:19,genre_id:4)
+#   EventGenre.create(event_id:20,genre_id:1)
 
 #User.delete_all
 
