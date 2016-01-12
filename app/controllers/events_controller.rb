@@ -15,7 +15,9 @@ class EventsController < ApplicationController
   end
 
   def edit
-    
+    @event = Event.new
+    @acts = Act.all
+    @venues = Venue.all
   end
 
   def search
