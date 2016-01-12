@@ -4,7 +4,7 @@ class EventsController < ApplicationController
     
     @genres = Genre.all
     @events = Event.all
-    # binding.pry
+    @bookings = Booking.all
 
   end
 

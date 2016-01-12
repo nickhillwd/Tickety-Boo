@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'bookings/all'
+
   get 'genres/index'
 
   get 'genres/show'

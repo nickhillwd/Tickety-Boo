@@ -19,6 +19,7 @@ class Ability
     else
       can :read, [Event, Act, Venue]
       can :create, Booking
+      can :all, Booking
       #can :create, Comment
       #can :update, Comment
     end

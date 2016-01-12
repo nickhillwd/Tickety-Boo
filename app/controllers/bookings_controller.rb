@@ -28,6 +28,10 @@ class BookingsController < ApplicationController
      redirect_to(root_path)
   end
 
+  def all
+    @bookings = Booking.where({user_id: current_user.id})
+  end
+
   private
 
   def booking_params
