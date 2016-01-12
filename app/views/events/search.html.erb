@@ -1,0 +1,29 @@
+<% if @events.present? || @acts.present? || @venues.present? || @genres.present? %>
+
+    <% if @events.present? %>
+      <% @events.each do |event| %>
+        <h3><%= link_to "#{event.event_details}", event_path(event.id) %></h3>
+      <% end %>
+    <% end %>
+
+    <% if @acts.present? %>
+      <% @acts.each do |act| %>
+        <h3> <%= link_to "#{act.act_name}", act_path(act.id) %> </h3>
+      <% end %>
+    <% end %>
+
+    <% if @venues.present? %>
+      <% @venues.each do |venue| %>
+        <h3> <%= link_to "#{venue.venue_name}", venue_path(venue.id) %> </h3>
+      <% end %>
+    <% end %>
+
+    <% if @genres.present? %>
+      <% @genres.each do |genre| %>
+        <h3> <%= link_to "#{genre.title}", genre_path(genre.id) %> </h3>
+      <% end %>
+    <% end %>
+
+  <% else %>
+    <h3>There are no SEARCH RESULT containing: <%= params[:search] %></h3>
+  <% end %>

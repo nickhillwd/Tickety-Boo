@@ -14,7 +14,12 @@
       <div class="nav-left">
         <ul>
           <li class="logo"><%= link_to(content_tag(:i, nil, class: 'fa fa-ticket fa-2x'), root_path) %></li>
-          <li>Search Function</li>
+          <li>
+            <%= form_tag(search_path, method: :get, id: "search_form") do %>
+              <%= text_field_tag :search, params[:search], placeholder: "Search Here" %>
+              <%= submit_tag "Search" %>
+            <% end %>
+          </li>
         </ul>
       </div>
       <div class="nav-right">

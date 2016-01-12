@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   get 'bookings/all'
 
+  get 'search' => 'events#search'
+
   get 'genres/index'
 
   get 'genres/show'

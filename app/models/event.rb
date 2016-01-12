@@ -7,4 +7,8 @@ class Event < ActiveRecord::Base
   has_many :event_genres
   has_many :genres, :through => :event_genres
 
+  def self.search(search)
+    where("event_details LIKE ?", "%#{search}%")
+  end
+
 end
