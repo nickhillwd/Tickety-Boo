@@ -4,26 +4,26 @@
   <div class="grid grid-6">
     <div class="panel panel-primary">
       <div class="panel-heading"><%= link_to "View All Categories", genres_path %></div>
-        <h3><%= @genres.first.title %></h3>
+        <h3><%= link_to "#{@genres.first.title}", genre_path(@genres.first.id) %></h3>
         <% @genres.first.events.first(4).each do |event| %>
           <%= event.event_details %>
           <br>
         <% end %>
         <br>
-        <h3><%= @genres.second.title %></h3>
+        <h3><%= link_to "#{@genres.second.title}", genre_path(@genres.second.id) %></h3>
         <% @genres.second.events.first(4).each do |event| %>
           <%= event.event_details %>
           <br>
         <% end %>
-        <h3><%= @genres.third.title %></h3>
+        <h3><%= link_to "#{@genres.third.title}", genre_path(@genres.third.id) %></h3>
         <% @genres.third.events.first(4).each do |event| %>
           <%= event.event_details %>
           <br>
-        <h3><%= @genres[3].title %></h3>
+        <% end %>
+        <h3><%= link_to "#{@genres[3].title}", genre_path(@genres[3].id) %></h3>
         <% @genres[3].events.first(4).each do |event| %>
           <%= event.event_details %>
           <br>
-        <% end %>
         <% end %>
     </div>
   </div>
