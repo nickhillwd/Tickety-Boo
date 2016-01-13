@@ -30,13 +30,12 @@
 
   <div class="grid grid-6">
     <div class="panel panel-primary">
-      <div class="panel-heading">View All Events</div>
-        <% @events.each do |event| %>
-          <%= link_to "#{event.act.act_name}", act_path(event.act.id) %>
-          <br>
-          <%= link_to "#{event.venue.venue_name}", venue_path(event.venue.id) %>
-          <br>
-          <%= event.event_start_time.strftime('%H:%M on %d %^b %Y') %>
+      <div class="panel-heading">Featured Events</div>
+        <% @featured.each do |feature| %>
+          <div class="feature-box">
+            <%= feature.event.event_details %>
+            <%= feature.event.act.act_image %>
+          </div>
           <br>
           <br>
         <% end %>

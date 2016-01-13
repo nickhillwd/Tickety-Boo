@@ -2,6 +2,7 @@ class Event < ActiveRecord::Base
 
   belongs_to :act
   belongs_to :venue
+  belongs_to :feature
   has_many :bookings
   has_many :users, :through => :bookings
   has_many :event_genres

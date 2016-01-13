@@ -5,6 +5,7 @@ class EventsController < ApplicationController
     @genres = Genre.all
     @events = Event.all
     @bookings = Booking.all
+    @featured = Feature.all
 
   end
 
