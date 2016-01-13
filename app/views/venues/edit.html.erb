@@ -1,14 +1,23 @@
-<%= form_for @venue do |f| %>
-  <%= f.label :venue_name %>
-  <%= f.text_field :venue_name %>
-  <br>
-  <%= f.label :venue_location %>
-  <%= f.text_field :venue_location %>
-  <br>
-  <br>
-  <%= f.label :venue_capacity %>
-  <%= f.text_field :venue_capacity %>
-  <br>
-  <br>
-  <%= f.submit 'Edit Venue!' %>
-<% end %>
+<section class="row">
+  <div class="grid grid-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+      <%= "#{@venue.venue_name}" %>
+      </div>
+        <%= form_for @venue do |f| %>
+          <%= f.label :venue_name %>
+          <%= f.text_field :venue_name %>
+          <br>
+          <%= f.label :venue_location %>
+          <%= f.text_field :venue_location %>
+          <br>
+          <br>
+          <%= f.label :venue_capacity %>
+          <%= f.text_field :venue_capacity %>
+          <br>
+          <br>
+          <%= f.submit 'Edit Venue!' %>
+        <% end %>
+    </div>
+  </div>
+</section>

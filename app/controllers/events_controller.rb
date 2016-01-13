@@ -22,6 +22,11 @@ class EventsController < ApplicationController
 
   def update
     event = Event.find(params[:id])
+    double_booking = event.double_booking?
+    if double_booking
+      redirect_to edit_event_path(event.id), alert: ("Fail: #{double_booking}")
+      return
+    end
     event.update(event_params)
     redirect_to admin_index_path
   end
@@ -34,6 +39,11 @@ class EventsController < ApplicationController
 
   def create
     event_new = Event.new(event_params)
+    double_booking = event_new.double_booking?
+    if double_booking
+      redirect_to new_event_path, alert: ("Fail: #{double_booking}")
+      return
+    end
     event_new.save
     redirect_to admin_index_path
   end
