@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'features/edit'
+
   get 'venues/all_events'
 
   get 'acts/all_events'
@@ -29,6 +31,7 @@ Rails.application.routes.draw do
   resources :acts
   resources :genres
   resources :charges
+  resources :features
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

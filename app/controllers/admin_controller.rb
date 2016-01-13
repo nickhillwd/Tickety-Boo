@@ -6,6 +6,7 @@ class AdminController < ApplicationController
     @bookings = Booking.all
     @users = User.all
     @acts = Act.all
+    @featured = Feature.all
   end
 
 end

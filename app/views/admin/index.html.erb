@@ -82,6 +82,22 @@
     </div>
   </div>
 
+  <div class="grid grid-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3>Featured Events<h3>
+      </div>
+      <br>
+      <br>
+      <% @featured.each do |feature| %>
+        <%= feature.event.event_details %>
+        <%= link_to "Change This Feature", edit_feature_path(feature.id) %>
+        <br>
+        <br>
+      <% end %>
+    </div>
+  </div>  
+
 </section> 
 
 
