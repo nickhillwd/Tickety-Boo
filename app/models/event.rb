@@ -26,14 +26,20 @@ class Event < ActiveRecord::Base
     return nil
   end
 
+  def tickets_left?
+    event = Event.find(self.id)
+    booking_count = event.bookings.count
+    tickets_left = event.venue.venue_capacity - booking_count
+  end
+
   def sold_out?
     event = Event.find(self.id)
     booking_count = event.bookings.count
-    @tickets_left = event.venue.venue_capacity - booking_count
-    if @tickets_left >= event.venue.venue_capacity
-      return "Event Sold Out"
+    tickets_left = event.venue.venue_capacity - booking_count
+    if tickets_left >= event.venue.venue_capacity
+      return true
     else
-      return @tickets_left
+      return false
     end
   end
 

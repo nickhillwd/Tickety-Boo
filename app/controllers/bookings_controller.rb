@@ -9,6 +9,9 @@ class BookingsController < ApplicationController
 
   def create
     new_booking = Booking.new(booking_params)
+    if new_booking.event.sold_out?
+      redirect_to root_path, alert: "Event Sold Out"
+    end
     new_booking.save
   
     @amount = ((new_booking.event.event_price)*100).to_i
