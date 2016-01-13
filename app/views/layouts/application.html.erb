@@ -8,6 +8,7 @@
 </head>
 <body>
   <div class="header-image">
+    <h1>Tickety-Boo!</h1>
   </div>
   <nav>
     <div class="container">
@@ -24,14 +25,13 @@
       </div>
       <div class="nav-right">
         <ul>
-          <li>Deals</li>
-            <% if user_signed_in? %>
-              <li>Welcome back: <%= current_user.email %></li>
-              <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-              <li class="logo"><%= link_to(content_tag(:i, nil, class: 'fa fa-shopping-cart fa-2x'), bookings_all_path) %></li>
-            <% else %>
-          <li><%= link_to "Sign In", new_user_session_path %></li>
-            <% end %> 
+          <% if user_signed_in? %>
+            <li id="welcome">Welcome back: <%= current_user.email %></li>
+            <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+            <li class="logo"><%= link_to(content_tag(:i, nil, class: 'fa fa-shopping-cart fa-2x'), bookings_all_path) %></li>
+          <% else %>
+            <li><%= link_to "Sign In", new_user_session_path %></li>
+          <% end %> 
         </ul>
       </div>
     </div>
@@ -53,11 +53,25 @@
 
     <%= yield %>
 
-    <%= debug(params) if Rails.env.development? %>
+    <%#= debug(params) if Rails.env.development? %>
   </div>
 
   <footer>
-    Footer
+    <div class="container">
+      <div class="footer-left">
+      <ul>
+        <li class="logo" ><i class="fa fa-facebook-official"></i></li>
+        <li class="logo"><i class="fa fa-twitter-square"></i></li>
+        <li class="logo"><i class="fa fa-pinterest-p"></i></li>
+        <li class="logo"><i class="fa fa-github"></i></li>
+      </ul>
+      </div>
+      <div class="footer-right">
+        <ul>
+          <li class="logo"><i class="fa fa-copyright"></i>Tickety-Boo!</li>
+        </ul>
+      </div>
+    </div>
   </footer>
 
 </body>

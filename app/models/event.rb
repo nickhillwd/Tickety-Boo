@@ -37,7 +37,7 @@ class Event < ActiveRecord::Base
     event = Event.find(self.id)
     booking_count = event.bookings.count
     tickets_left = event.venue.venue_capacity - booking_count
-    if tickets_left >= event.venue.venue_capacity
+    if tickets_left > event.venue.venue_capacity
       return true
     else
       return false

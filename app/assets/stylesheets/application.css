@@ -16,6 +16,20 @@
  *= require font-awesome
  */
 
+ /*------ GENERAL ------*/
+
+ a {
+   text-decoration: none;
+ }
+
+ a:hover {
+   font-weight: bold;
+ }
+
+ a:visited {
+   color: inherit;
+ }
+
  /*------ HEADER IMAGE ------*/
 
  .header-image {
@@ -24,6 +38,15 @@
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
+   margin-top: -70px;
+ }
+
+ .header-image h1 {
+   line-height: 350px;
+   font-size: 100px;
+   font-weight: bolder;
+   color: #fff;
+   text-align: center;
  }
 
  /*------ NAV BAR ------*/
@@ -34,6 +57,7 @@
    line-height:  55px;
    position: sticky;
    top:0px;
+   margin-bottom: 50px;
  }
 
  .nav-left {
@@ -71,6 +95,10 @@
    font-weight: 600;
  }
 
+ #welcome {
+   color:#fff;
+ }
+
  /*------ GRID FRAMEWORK ------*/
 
  .container {
@@ -89,6 +117,7 @@
    margin-right:-4px; /* using inline block adds a 4px right-hand margin by default, REMOVE! */
    padding: 0 5.6%;
    box-sizing: border-box;
+   margin-top: 25px;
  }
 
  .grid-1 {
@@ -160,13 +189,13 @@
 
  .panel-footer {
    padding: 8px 20px;
-   background-color: #1D27C9;
+   background-color: rgb(40, 57, 112);
  }
 
  .panel-primary .panel-heading {
    position: inherit fixed;
    top: 0;
-   background-color: #1D27C9;
+   background-color: rgb(40, 57, 112);
  }
 
  /*------ IMAGES ------*/
@@ -193,7 +222,56 @@
    max-width: 450px;
 }
 
+/*------ FOOTER ------*/
 
+footer {
+  background-color: rgb(38, 45, 66);
+  height: 40px;
+  line-height:  40px;
+  bottom: 0px;
+  margin-top:100px;
+}
+
+.footer-left {
+  float: left;
+}
+
+.footer-right {
+  float:right;
+}
+
+.logo {
+  color: #fff;
+  margin-left: 20px;
+}
+
+footer ul {
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  font-family: Helvetica, Sans-Serif;
+  color: #fff;
+  font-size: 15px;
+}
+
+footer ul li {
+  font-family: Helvetica, Sans-Serif;
+  color: #fff;
+  font-size: 15px;
+}
+
+nav ul li a:hover {
+  font-weight: 600;
+}
 
 
 
