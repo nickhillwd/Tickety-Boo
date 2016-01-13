@@ -1,0 +1,22 @@
+<section class="row">
+  <div class="grid grid-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+      <%= "#{@act.act_name}" %>
+      </div>
+        <%= form_for @act do |f| %>
+          <%= f.label :act_name %>
+          <%= f.text_field :act_name %>
+          <br>
+          <%= f.label :act_details %>
+          <%= f.text_field :act_details, :rows => 20, :cols => 20 %>
+          <br>
+          <%= f.label :act_image %>
+          <%= f.text_field :act_image %>
+          <%= f.submit 'Edit Act!' %>
+          <br>
+          <br>
+        <% end %>
+    </div>
+  </div>
+</section>

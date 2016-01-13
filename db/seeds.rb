@@ -42,7 +42,7 @@
 
 # Act.create(act_name:'Europes\'s Strongets Man', act_details: "Europe's Strongest Man is an annual strength athletics competition which began in 1980. The event is held in various locations throughout Europe, and features exclusively European strongman competitors. Mariusz Pudzianowski currently holds the record for most wins with 6 titles. Zydrunas Savickas, Geoff Capes and Riku Kiri each hold 3 titles. As of 2010, the Europe's Strongest Man contest has become a part of the Giants Live season of annual grand prix events. The contest serves as a qualifying event for the World's Strongest Man contest, with the top 3 placings qualifying for that year's WSM contest.")
 
-#Booking.delete_all
+Booking.delete_all
 
 # Event.delete_all
 # #Oasis MEN Arena
@@ -121,7 +121,11 @@
 #   EventGenre.create(event_id:19,genre_id:4)
 #   EventGenre.create(event_id:20,genre_id:1)
 
-#User.delete_all
+User.delete_all
+  User.create(email: 'user1@email.com', password:'Password1')
+  User.create(email: 'user2@email.com', password:'Password1')
+  User.create(email: 'user3@email.com', password:'Password1')
+  User.create(email: 'admin@email.com', password:'Password1', role: 'admin')
 
 # Venue.delete_all
 # Venue.create(venue_name: 'Carnegie Stadium', venue_details: "Leeds Rhinos have only ever played at Headingley since their formation in 1865. They ground share with rugby union side Yorkshire Carnegie who were formed in 1991. Both clubs and the ground itself are owned by Leeds Rugby. The rugby ground is also on the same site as the cricket ground operated by Yorkshire CCC. The North Stand of the rugby ground back onto the cricket ground. The Carnegie Stand was built in 2006 to incorporate executive boxes into Headingley and also expanded the capacity to 21,000 adding extra seating on the top tier and terrecing on the bottom. \nBoth Yorkshire CCC and Leeds Rugby are looking at redeveloping the North Stand as part of the redevelopment of the cricket ground to rebuild it and to add the seating on both sides to expand the capacity of both grounds and possibly add more executive boxes to the stadium. The club has also looked into the possibility of redeveloping the South Stand and the Western Terrece, however any redevelopment or expansion of the Western Terrece would require the demolition of housing and rerouting of a public right of way.", venue_location: 'Leeds', venue_capacity: 100)
