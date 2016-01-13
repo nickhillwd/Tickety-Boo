@@ -20,6 +20,16 @@ class ActsController < ApplicationController
     redirect_to admin_index_path
   end
 
+  def new
+    @act = Act.new
+  end
+
+  def create
+    act = Act.new(act_params)
+    act.save
+    redirect_to admin_index_path
+  end
+
   private
 
     def act_params

@@ -2,7 +2,7 @@
   <div class="grid grid-12">
     <div class="panel panel-primary">
       <div class="panel-heading">
-      <%= "#{@act.act_name}" %>
+      <p>Add New Act</p>
       </div>
         <%= form_for @act do |f| %>
           <%= f.label :act_name %>
@@ -15,7 +15,7 @@
           <%= f.text_field :act_image %>
           <br>
           <br>
-          <%= f.submit 'Edit Act!' %>
+          <%= f.submit 'Add Act!' %>
         <% end %>
     </div>
   </div>
