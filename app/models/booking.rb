@@ -6,4 +6,5 @@ class Booking < ActiveRecord::Base
   has_many :acts, :through => :event
   has_many :genres, :through => :event
 
+
 end
