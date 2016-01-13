@@ -5,7 +5,12 @@
     <div class="panel panel-primary">
       <%= @event.act.act_image %>
       <p>act image goes here</p>
-      <h3><%= link_to "Book This Event Now!", current_user ? new_event_booking_path(@event) : new_user_session_path %></h3>
+      <% if @event.sold_out? %>
+        <%= "SOLD OUT" %>
+      <% else %>
+        <%= "#{@event.tickets_left?} Tickets Left" %>
+        <h3><%= link_to "Book This Event Now!", current_user ? new_event_booking_path(@event) : new_user_session_path %></h3>
+      <% end %>
     </div>
   </div>
 
