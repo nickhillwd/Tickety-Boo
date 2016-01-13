@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'venues/all_events'
+
+  get 'acts/all_events'
+
   get 'admin/index'
 
   get 'bookings/all'

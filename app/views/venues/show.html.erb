@@ -5,7 +5,7 @@
     <div class="panel panel-primary">
       <%= @venue.venue_image %>
       <p>Venue image goes here</p>
-      <h3>See what else is on at <%= @venue.venue_name %> - WILL LINK TO SEARCH SHOW</h3>
+      <%= link_to "See what else is on at #{@venue.venue_name}", {:controller => "venues", :action => "all_events", :id => @venue.id} %>
     </div>
   </div>
 

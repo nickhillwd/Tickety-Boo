@@ -5,7 +5,7 @@
     <div class="panel panel-primary">
       <%= @act.act_image %>
       <p>Act image goes here</p>
-      <h3> see all acts for this artist - will link to search show<%=  %></h3>
+      <%= link_to "See all #{@act.act_name}'s Events", {:controller => "acts", :action => "all_events", :id => @act.id} %>
     </div>
   </div>
 

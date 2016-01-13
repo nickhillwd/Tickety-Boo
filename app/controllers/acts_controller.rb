@@ -5,4 +5,8 @@ class ActsController < ApplicationController
   def show
     @act = Act.find(params[:id])    
   end
+
+  def all_events
+    @act = Act.find(params[:id])
+  end
 end
