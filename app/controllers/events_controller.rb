@@ -16,7 +16,6 @@ class EventsController < ApplicationController
 
   def edit
     @event = Event.find(params[:id])
-    @event = Event.new
     @acts = Act.all
     @venues = Venue.all
   end
