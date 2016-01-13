@@ -31,7 +31,7 @@
       <div class="panel-heading">Featured Events</div>
         <% @featured.each do |feature| %>
           <div class="feature-box">
-            <%= link_to "#{feature.event.event_details}", event_path(feature.event.id) %>
+            <h3><%= link_to "#{feature.event.event_details}", event_path(feature.event.id) %></h3>
             <div class="feature-image">
               <%= image_tag feature.event.act.act_image %>
             </div>

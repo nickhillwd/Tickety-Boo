@@ -26,11 +26,11 @@
       <div class="nav-right">
         <ul>
           <% if user_signed_in? %>
-            <li id="welcome">Welcome back: <%= current_user.email %></li>
+            <li class="welcome">Welcome back: <%= current_user.email %></li>
             <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
             <li class="logo"><%= link_to(content_tag(:i, nil, class: 'fa fa-shopping-cart fa-2x'), bookings_all_path) %></li>
           <% else %>
-            <li><%= link_to "Sign In", new_user_session_path %></li>
+            <li class="welcome"><%= link_to "Sign In", new_user_session_path %></li>
           <% end %> 
         </ul>
       </div>
