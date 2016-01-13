@@ -1,2 +1,16 @@
-<h1>Features#edit</h1>
-<p>Find me in app/views/features/edit.html.erb</p>
+<section class="row">
+  <div class="grid grid-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+      <p>Change Feature</p>
+      </div>
+        <%= form_for @feature do |f| %>
+          <%= f.label :event_id, "Event" %>
+          <%= f.collection_select(:event_id, Event.all, :id, :event_details, prompt: "Select Event") %>
+          <br>
+          <br>
+          <%= f.submit 'Change Feature!' %>
+        <% end %>
+    </div>
+  </div>
+</section>
