@@ -169,4 +169,32 @@
    background-color: #1D27C9;
  }
 
+ /*------ IMAGES ------*/
+
+.individual-image {
+   height: 400px;
+   width: 400px;
+   border: 1px solid black;
+}
+
+.individual-image img {
+   max-height: 400px;
+   max-width: 400px;
+}
+
+.feature-image {
+   height: 450px;
+   width: 450px;
+   border: 1px solid black;
+}
+
+.feature-image img {
+   max-height: 450px;
+   max-width: 450px;
+}
+
+
+
+
+
 

@@ -3,8 +3,9 @@
 <section class="row">
   <div class="grid grid-6">
     <div class="panel panel-primary">
-      <%= @act.act_image %>
-      <p>Act image goes here</p>
+      <div class="individual-image">
+        <%= image_tag @act.act_image %>
+      </div>
       <%= link_to "See all #{@act.act_name}'s Events", {:controller => "acts", :action => "all_events", :id => @act.id} %>
     </div>
   </div>

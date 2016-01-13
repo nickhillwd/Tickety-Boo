@@ -3,10 +3,11 @@
 <section class="row">
   <div class="grid grid-6">
     <div class="panel panel-primary">
-      <%= @event.act.act_image %>
-      <p>act image goes here</p>
+      <div class="individual-image">
+        <%= image_tag @event.act.act_image %>  
+      </div>
       <% if @event.sold_out? %>
-        <%= "SOLD OUT" %>
+        <h1><%= "SOLD OUT" %><h1>
       <% else %>
         <%= "#{@event.tickets_left?} Tickets Left" %>
         <h3><%= link_to "Book This Event Now!", current_user ? new_event_booking_path(@event) : new_user_session_path %></h3>

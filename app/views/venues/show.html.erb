@@ -3,8 +3,9 @@
 <section class="row">
   <div class="grid grid-6">
     <div class="panel panel-primary">
-      <%= @venue.venue_image %>
-      <p>Venue image goes here</p>
+      <div class="individual-image">
+        <%= image_tag @venue.venue_image %>
+      </div>
       <%= link_to "See what else is on at #{@venue.venue_name}", {:controller => "venues", :action => "all_events", :id => @venue.id} %>
     </div>
   </div>
