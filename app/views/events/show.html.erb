@@ -20,7 +20,7 @@
       <%= @event.act.act_name %>
       <br>
       <br>
-      <%= @event.venue.venue_name %>
+      <%= link_to "#{@event.venue.venue_name}", venue_path(params[:id]) %>
       <br>
       <br>
       <%= @event.event_start_time.strftime('%H:%M on %d %^b %Y') %>

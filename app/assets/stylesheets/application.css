@@ -20,6 +20,7 @@
 
  a {
    text-decoration: none;
+   color: #000;
  }
 
  a:hover {
@@ -184,6 +185,10 @@
    border-radius: 5px;
  }
 
+ .pannel-heading a {
+  color: #fff;
+ }
+
  .panel-body {
    padding: 15px 20px;
  }
@@ -202,27 +207,27 @@
  /*------ IMAGES ------*/
 
 .individual-image {
-   height: 400px;
-   width: 400px;
+   height: 200px;
+   width: 300px;
    border: 1px solid black;
    border-radius: 5px;
 }
 
 .individual-image img {
-   max-height: 400px;
-   max-width: 400px;
+   max-height: 200px;
+   max-width: 300px;
 }
 
 .feature-image {
-   height: 450px;
-   width: 450px;
+   height: 200px;
+   width: 300px;
    border: 1px solid black;
    border-radius: 5px;
 }
 
 .feature-image img {
-   max-height: 450px;
-   max-width: 450px;
+   max-height: 200px;
+   max-width: 300px;
 }
 
 /*------ FOOTER ------*/

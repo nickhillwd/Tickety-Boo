@@ -42,7 +42,18 @@
 
 # Act.create(act_name:'Europes\'s Strongets Man', act_details: "Europe's Strongest Man is an annual strength athletics competition which began in 1980. The event is held in various locations throughout Europe, and features exclusively European strongman competitors. Mariusz Pudzianowski currently holds the record for most wins with 6 titles. Zydrunas Savickas, Geoff Capes and Riku Kiri each hold 3 titles. As of 2010, the Europe's Strongest Man contest has become a part of the Giants Live season of annual grand prix events. The contest serves as a qualifying event for the World's Strongest Man contest, with the top 3 placings qualifying for that year's WSM contest.")
 
-Booking.delete_all
+# Act.create(act_name: 'The Verve',act_details: "The Verve were an English rock band formed in Wigan in 1990 by lead vocalist Richard Ashcroft, guitarist Nick McCabe, bass guitarist Simon Jones and drummer Peter Salisbury. The guitarist and keyboard player Simon Tong became a member at a later date.\nBeginning with a psychedelic sound, by the mid-1990s the band had released several EPs and three albums. It also endured name and line-up changes, break-ups, health problems, drug abuse and various lawsuits. The band's commercial breakthrough was the 1997 album Urban Hymns, one of the best-selling albums in UK Chart history. The album features the hit singles \"Bitter Sweet Symphony\", \"The Drugs Don't Work\" and \"Lucky Man\". In 1998, the band won two Brit Awards—winning Best British Group, appeared on the cover of Rolling Stone magazine in March, and in February 1999, \"Bitter Sweet Symphony\" was nominated for the Grammy Award for Best Rock Song.\nSoon after their commercial peak, The Verve broke up in April 1999, citing internal conflicts. According to Billboard magazine, \"the group's rise was the culmination of a long, arduous journey that began at the dawn of the decade and went on to encompass a major breakup, multiple lawsuits, and an extensive diet of narcotics\". During an eight-year split, Ashcroft dismissed talk of a reunion, saying: \"You're more likely to get all four Beatles on stage.\" The band's original line-up reunited in June 2007, embarking on a tour later that year and releasing the album Forth in August 2008, which spawned the hit single \"Love Is Noise\". Amid revived tensions, the band broke up for the second time in 2009.",act_image: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Verve_MSG.jpg")
+# Act.create(act_name: 'Billy Connolly',act_details: "William \"Billy\" Connolly, CBE (born 24 November 1942) is a Scottish comedian, musician, presenter and actor. He is sometimes known, especially in his native Scotland, by the nickname \"The Big Yin\" (\"The Big One\"). His first trade, in the early 1960s, was as a welder (specifically a boilermaker) in the Glasgow shipyards, but he gave it up towards the end of the decade to pursue a career as a folk singer in The Humblebums alongside friend Gerry Rafferty until 1971 and subsequently as a soloist. In the early 1970s, he made the transition from folk-singer with a comedic persona to fully-fledged comedian. Best known to many as a stand up comedian, he appears in several lists of the greatest comedians ever.\nConnolly is also an actor and has appeared in such films as Water (1985); Indecent Proposal (1993); Pocahontas (1995); Muppet Treasure Island (1996); Mrs. Brown (1997); The Boondock Saints (1999); The Man Who Sued God (2001); The Last Samurai (2003); Timeline (2003); Lemony Snicket's A Series of Unfortunate Events (2004); Garfield: A Tail of Two Kitties (2006); Open Season (2006); The X-Files: I Want to Believe (2008); Open Season 2 (2008); Brave (2012); Quartet (2012) and The Hobbit: The Battle of the Five Armies (2014). Connolly reprised his role as Noah \"Il Duce\" MacManus in The Boondock Saints II: All Saints Day (2009).",act_image: "https://upload.wikimedia.org/wikipedia/commons/9/95/Billy_Connolly_Festival_Cine_Sidney.jpg")
+# Act.create(act_name: 'Bill Bailey',act_details: "Bill Bailey (born Mark Bailey; 13 January 1965) is an English comedian, musician, actor, TV and radio presenter and author. Bailey is well known for his role in Black Books and for his appearances on Never Mind the Buzzcocks, Have I Got News for You, and QI as well as his extensive stand-up work.\nBailey was listed by the Observer as one of the 50 funniest acts in British comedy in 2003. In 2007 and again in 2010, he was voted the 7th greatest stand-up comic on Channel 4's 100 Greatest Stand-Ups.",act_image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Bill_Bailey_rocking_out.jpg/1024px-Bill_Bailey_rocking_out.jpg")
+# Act.create(act_name: 'Dara Ó Briain',act_details: "Dara Ó Briain (/ˌdɑːrə oʊˈbriən, ˌdærə-/; Irish pronunciation: [ˈd̪ˠaɾˠə oː ˈbʲɾʲiənʲ]; born 4 February 1972) is an Irish comedian and television presenter in the United Kingdom and Ireland. He is noted for hosting topical panel shows such as Mock the Week, The Panel, and The Apprentice: You're Fired!. His TV work also includes starring in and writing of television comedy and documentary series. Ó Briain has also been a newspaper columnist, with pieces published in national papers in both Britain and Ireland.\nIn 2009, the Irish Independent described Ó Briain as Britain's \"favourite Irishman\" and in 2010, Ó Briain was voted the 16th greatest stand-up comic on Channel 4's 100 Greatest Stand-Ups.",act_image: "https://upload.wikimedia.org/wikipedia/commons/e/e1/Dara_%C3%93_Briain_2011_BAFTAs.jpg")
+# Act.create(act_name: 'Micky Flanagan',act_details: "Michael \"Micky\" Flanagan (born October 1962) is an English comedian. Flanagan has performed at the Edinburgh Fringe and toured Britain with stand-up shows. He presented Micky Flanagan: What Chance Change? for Radio 4 and has appeared on various TV shows including Mock the Week, A League of Their Own, 8 Out of 10 Cats and Michael McIntyre's Comedy Roadshow. He released his debut DVD in November 2011.",act_image: "https://upload.wikimedia.org/wikipedia/commons/a/a2/Micky_Flanagan.jpg")
+# Act.create(act_name: 'Jasper Carrott',act_details: "Born in Shaftmoor Lane, Acocks Green (which he said sounded like the address for \"the home of a professional rapist\"), in Birmingham, Carrott was educated at Acocks Green primary school and Moseley School. He worked as a trainee buyer at a city centre department store, the Beehive, with schoolmate Bev Bevan.",act_image: "https://upload.wikimedia.org/wikipedia/commons/9/9b/Jasper_Carrott_cropped_version.jpg")
+# Act.create(act_name: 'River Dancd',act_details: "Riverdance is a theatrical show consisting mainly of traditional Irish music and dance. Featuring Irish dancing champions Jean Butler and Michael Flatley, and with a score composed by Limerick native Bill Whelan, it originated as an interval performance act during the 1994 Eurovision Song Contest. Shortly afterwards, husband and wife production team John McColgan and Moya Doherty expanded it into a stage show, which opened in Dublin on 9 February 1995. Since then, the show has visited over 450 venues worldwide and been seen by over 25 million people, making it one of the most successful dance productions in the world.",act_image: "https://www.google.co.uk/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjso--h0qfKAhXE2Q4KHUV0Bk4QjRwIBw&url=http%3A%2F%2Fwww.starkinsider.com%2F2009%2F12%2Fbroadway-san-jose-riverdance-throws-a-party-of-dance-song-and-music-irish-style.html&psig=AFQjCNFpL367yP1MtsURg2qwPC7evZKCFQ&ust=1452803810889858")
+# Act.create(act_name: 'Snow White',act_details: "\"Snow White\" is a German fairy tale known across much of Europe and is today one of the most famous fairy tales worldwide. The Brothers Grimm published it in 1812 in the first edition of their collection Grimms' Fairy Tales. It was titled in German: Sneewittchen (in modern orthography Schneewittchen) and numbered as Tale 53. The Grimms completed their final revision of the story in 1854.\nThe fairy tale features such elements as the magic mirror, the poisoned apple, the glass coffin, matricide, filicide, and the characters of the Evil Queen, Snow White's evil stepmother, the huntsman, a beautiful princess named Snow White into a sleeping enchantment, a handsome prince and the seven dwarfs. The seven dwarfs were first given individual names in the 1912 Broadway play Snow White and the Seven Dwarfs and then given different names in Walt Disney's 1937 film Snow White and the Seven Dwarfs. The Grimm story, which is commonly referred to as \"Snow White\", should not be confused with the story of \"Snow White and Rose Red\" (in German \"Schneeweißchen und Rosenrot\"), another fairy tale collected by the Brothers Grimm.\nIn the Aarne–Thompson folklore classification, tales of this kind are grouped together as type 709, Snow White. Others of this kind include \"Bella Venezia\", \"Myrsina\", \"Nourie Hadig\", \"Gold-Tree and Silver-Tree\", The Young Slave and La petite Toute-Belle.",act_image: "https://www.google.co.uk/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwil9fmO06fKAhXCXA8KHYiHA7EQjRwIBw&url=http%3A%2F%2Fpixiedustquotes.tumblr.com%2Fpost%2F18613591709%2Fsomeday-my-prince-will-come-snow-white&psig=AFQjCNHD1vsSXwF_a5oSAOapv-TE1nnDgw&ust=1452804087246424")
+# Act.create(act_name: 'Sleeping Beauty',act_details: "\"Sleeping Beauty\" (French: La Belle au bois dormant \"The Beauty Sleeping in the Wood\") by Charles Perrault or \"Little Briar Rose\" (German: Dornröschen) by the Brothers Grimm is a classic fairy tale written by Charles Perrault and the Brothers Grimm, which involves a beautiful princess, a sleeping enchantment, and a handsome prince. The version collected by the Brothers Grimm was an orally transmitted version of the originally literary tale published by Charles Perrault in Histoires ou contes du temps passé in 1697. This in turn was based on Sun, Moon, and Talia by Italian poet Giambattista Basile (published posthumously in 1634), which was in turn based on one or more folk tales. The earliest known version of the story is Perceforest, composed between 1330 and 1344 and first printed in 1528.",act_image: "https://upload.wikimedia.org/wikipedia/commons/c/ce/Henry_Meynell_Rheam_-_Sleeping_Beauty.jpg")
+# Act.create(act_name: "Chitty Chitty Bang Bang",act_details: "Chitty Chitty Bang Bang is a 1968 British musical film loosely based on Ian Fleming's novel Chitty-Chitty-Bang-Bang: The Magical Car. The film's script is by Roald Dahl and Ken Hughes and its songs by the Sherman Brothers. The song \"Chitty Chitty Bang Bang\" was nominated for an Academy Award.\nThe film stars Dick Van Dyke as Caractacus Potts, Sally Ann Howes as Truly Scrumptious, Lionel Jeffries as Grandpa Potts, James Robertson Justice as Lord Scrumptious and Robert Helpmann as the Childcatcher. The film was directed by Ken Hughes and produced by Albert R. Broccoli (co-producer of the James Bond series of films, also based on Fleming's novels). John Stears supervised the special effects. Irwin Kostal supervised and conducted the music, while the musical numbers were staged by Marc Breaux and Dee Dee Wood.",act_image: "https://www.google.co.uk/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwipu5qU1KfKAhVG8A4KHWk7AmwQjRwIBw&url=http%3A%2F%2Frap.genius.com%2F1770305%2FFugees-family-business%2FStolen-cars-bang-like-my-chitty-bang-bang-sh-bang&bvm=bv.111677986,d.ZWU&psig=AFQjCNGYbsfZc4F5HEpWEG42tbG16LOktg&ust=1452804363181758")
+
+#Booking.delete_all
 
 # Event.delete_all
 # #Oasis MEN Arena
@@ -93,39 +104,45 @@ Booking.delete_all
 # #ballet
 # Event.create(act_id: 65,venue_id: 20,event_start_time: "2016-02-23 19:00",event_end_time: "2016-02-23 22:00", event_price: 65, event_details: 'Swan Lake')
 
-# #ESM headdingley
+# ESM headdingley
 # Event.create(act_id: 66,venue_id: 14,event_start_time: "2016-06-20 11:00",event_end_time: "2016-06-20 16:00", event_price: 45, event_details: 'Europe\'s Strongest Man')
+
+# Event.create(act_id: 67,venue_id: 17,event_start_time: "2016-03-01 19:00",event_end_time: "2016-03-01 23:00",event_price: 45.00,event_details: 'Sweet Like Chocolate Tour')
+# Event.create(act_id: 69,venue_id: 16,event_start_time: "2016-03-02 19:00",event_end_time: "2016-03-02 23:00",event_price: 53.00,event_details: 'Urban Hymns Tour')
+# Event.create(act_id: 70,venue_id: 21,event_start_time: "2016-03-03 19:00",event_end_time: "2016-03-03 23:00",event_price: 48.00,event_details: 'Callam Dougan on Tour ;)')
+# Event.create(act_id: 71,venue_id: 23,event_start_time: "2016-03-04 19:00",event_end_time: "2016-03-04 23:00",event_price: 38.00,event_details: 'Black Books Tour')
+# Event.create(act_id: 72,venue_id: 20,event_start_time: "2016-03-05 19:00",event_end_time: "2016-03-05 23:00",event_price: 58.00,event_details: 'Have I got News For You Roadshow')
+# Event.create(act_id: 73,venue_id: 21,event_start_time: "2016-03-06 19:00",event_end_time: "2016-03-06 23:00",event_price: 38.00,event_details: 'Micky On Tour')
+# Event.create(act_id: 74,venue_id: 19,event_start_time: "2016-03-07 19:00",event_end_time: "2016-03-07 23:00",event_price: 43.00,event_details: 'Eat Your Carrots So you Can See In The Dark Tour')
+# Event.create(act_id: 75,venue_id: 20,event_start_time: "2016-03-08 19:00",event_end_time: "2016-03-08 23:00",event_price: 58.00,event_details: "Classic River Dance")
+# Event.create(act_id: 76,venue_id: 20,event_start_time: "2016-03-09 19:00",event_end_time: "2016-03-09 23:00",event_price: 63.00,event_details: 'Snow Whit and the seven vertically challanged folks')
+# Event.create(act_id: 77,venue_id: 20,event_start_time: "2016-03-10 19:00",event_end_time: "2016-03-10 23:00",event_price: 68.00,event_details: 'Classic Sleeping Beauty')
+# Event.create(act_id: 78,venue_id: 21,event_start_time: "2016-03-11 19:00",event_end_time: "2016-03-11 23:00",event_price: 54.00,event_details: 'Classic Chitty-Chitty-Bang-Bang')
 
 # Genre.delete_all
 #   Genre.create(title:'Sport') 1
 #   Genre.create(title:'Music') 2
 #   Genre.create(title: 'Comedy') 3
 #   Genre.create(title: 'Theatre & The Arts') 4
+ 
+# EventGenre.create(genre_id: 2,event_id:28)
+# EventGenre.create(genre_id: 2,event_id:29)
+# EventGenre.create(genre_id: 3,event_id:30)
+# EventGenre.create(genre_id: 3,event_id:31)
+# EventGenre.create(genre_id: 3,event_id:32)
+# EventGenre.create(genre_id: 3,event_id:33)
+# EventGenre.create(genre_id: 3,event_id:34)
+# EventGenre.create(genre_id: 4,event_id:35)
+# EventGenre.create(genre_id: 4,event_id:36)
+# EventGenre.create(genre_id: 4,event_id:37)
+# EventGenre.create(genre_id: 4,event_id:38)          
 
-# EventGenre.delete_all
-#   EventGenre.create(event_id:4, genre_id:2)
-#   EventGenre.create(event_id:5,genre_id:2)
-#   EventGenre.create(event_id:6,genre_id:2)
-#   EventGenre.create(event_id:7,genre_id:2)
-#   EventGenre.create(event_id:8,genre_id:2)
-#   EventGenre.create(event_id:9,genre_id:2)
-#   EventGenre.create(event_id:10,genre_id:2)
-#   EventGenre.create(event_id:11,genre_id:1)
-#   EventGenre.create(event_id:12,genre_id:1)
-#   EventGenre.create(event_id:13,genre_id:2)
-#   EventGenre.create(event_id:14,genre_id:2)
-#   EventGenre.create(event_id:15,genre_id:1)
-#   EventGenre.create(event_id:16,genre_id:1)
-#   EventGenre.create(event_id:17,genre_id:3)
-#   EventGenre.create(event_id:18,genre_id:3)
-#   EventGenre.create(event_id:19,genre_id:4)
-#   EventGenre.create(event_id:20,genre_id:1)
 
-User.delete_all
-  User.create(email: 'user1@email.com', password:'Password1')
-  User.create(email: 'user2@email.com', password:'Password1')
-  User.create(email: 'user3@email.com', password:'Password1')
-  User.create(email: 'admin@email.com', password:'Password1', role: 'admin')
+# User.delet"e_all
+#   User.create(email: 'user1@email.com', password:'Password1')
+#   User.create(email: 'user2@email.com', password:'Password1')
+#   User.create(email: 'user3@email.com', password:'Password1')
+#   User.create(email: 'admin@email.com', password:'Password1', role: 'admin')
 
 # Venue.delete_all
 # Venue.create(venue_name: 'Carnegie Stadium', venue_details: "Leeds Rhinos have only ever played at Headingley since their formation in 1865. They ground share with rugby union side Yorkshire Carnegie who were formed in 1991. Both clubs and the ground itself are owned by Leeds Rugby. The rugby ground is also on the same site as the cricket ground operated by Yorkshire CCC. The North Stand of the rugby ground back onto the cricket ground. The Carnegie Stand was built in 2006 to incorporate executive boxes into Headingley and also expanded the capacity to 21,000 adding extra seating on the top tier and terrecing on the bottom. \nBoth Yorkshire CCC and Leeds Rugby are looking at redeveloping the North Stand as part of the redevelopment of the cricket ground to rebuild it and to add the seating on both sides to expand the capacity of both grounds and possibly add more executive boxes to the stadium. The club has also looked into the possibility of redeveloping the South Stand and the Western Terrece, however any redevelopment or expansion of the Western Terrece would require the demolition of housing and rerouting of a public right of way.", venue_location: 'Leeds', venue_capacity: 100)
