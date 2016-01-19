@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get 'bookings/shopping_cart'
 
+  post 'stripe_checkout' => 'bookings#stripe_checkout'
+
   #search custom routes
   get 'search' => 'events#search'
 

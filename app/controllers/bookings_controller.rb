@@ -24,6 +24,37 @@ class BookingsController < ApplicationController
 
   def shopping_cart
     @bookings = current_user.bookings.unpaid_grouped_events
+
+    @amounts = @bookings.map do |booking|
+      (booking.event.event_price * @bookings.count[booking.event.id])
+
+    end
+    sum = @amounts.inject(:+)
+    @amount = (sum*100).to_i
+  end
+
+  def stripe_checkout
+    bookings = current_user.bookings.unpaid_grouped_events
+
+    amounts = bookings.map do |booking|
+      (booking.event.event_price * bookings.count[booking.event.id])
+    end
+    sum = amounts.inject(:+)
+    @amount = (sum*100).to_i
+
+        customer = Stripe::Customer.create(
+          :email => params[:stripeEmail],
+          :source  => params[:stripeToken]
+        )
+
+        charge = Stripe::Charge.create(
+          :customer    => customer.id,
+          :amount      => @amount,
+          :description => 'Rails Stripe customer',
+          :currency    => 'gbp'
+        )
+
+    redirect_to bookings_all_path
   end
 
   def all
