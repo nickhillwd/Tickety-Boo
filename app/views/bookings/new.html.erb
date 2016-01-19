@@ -16,8 +16,8 @@
     <br>
     £<%= @event.event_price %>
     <br>
-    <%= label "ticket_quantity", "Select Quantity" %>
-    <%= number_field "ticket_quantity", nil, :value => 1, in: 1..@ticket_range %>
+    <%= label :ticket_quantity, "Select Quantity" %>
+    <%= number_field :ticket_quantity, nil, :value => 1, in: 1..@ticket_range %>
     <br>
     <br>
     <%= f.submit 'Add To Basket' %>
