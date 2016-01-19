@@ -6,5 +6,6 @@ class Booking < ActiveRecord::Base
   has_many :acts, :through => :event
   has_many :genres, :through => :event
 
+  scope :unpaid, -> {where(:paid => nil)}
 
 end

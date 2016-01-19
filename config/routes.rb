@@ -1,27 +1,23 @@
 Rails.application.routes.draw do
 
+  #features cutom routes
   get 'features/edit'
 
+  #venues cuntom routes
   get 'venues/all_events'
 
-  get 'acts/all_events'
-
-  get 'admin/index'
-
+  #bookings custom routes
   get 'bookings/all'
 
+  get 'bookings/shopping_cart'
+
+  #search custom routes
   get 'search' => 'events#search'
 
-  get 'genres/index'
+  #acts custom routes
+  get 'acts/all_events'
 
-  get 'genres/show'
-
-  get 'acts/index'
-
-  get 'acts/show'
-
-  get 'venues/index'
-
+  #home route
   root to: 'events#index'
 
   resources :events do 
@@ -32,6 +28,7 @@ Rails.application.routes.draw do
   resources :genres
   resources :charges
   resources :features
+  resources :admin
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

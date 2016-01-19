@@ -29,7 +29,7 @@
             <li class="welcome">Welcome back: <%= current_user.email %></li>
             <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
             <li class="logo"><%= link_to(content_tag(:i, nil, class: 'fa fa-ticket fa-2x'), bookings_all_path) %></li>
-            <li class="logo"><%= link_to(content_tag(:i, nil, class: 'fa fa-shopping-cart fa-2x'), root_path) %></li>
+            <li class="logo"><%= link_to(content_tag(:i, nil, class: 'fa fa-shopping-cart fa-2x'), bookings_shopping_cart_path) %></li>
           <% else %>
             <li class="welcome"><%= link_to "Sign In", new_user_session_path %></li>
           <% end %> 

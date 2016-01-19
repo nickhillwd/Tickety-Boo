@@ -22,6 +22,10 @@ class BookingsController < ApplicationController
      redirect_to(root_path)
   end
 
+  def shopping_cart
+    @unpaid_bookings = current_user.bookings.unpaid
+  end
+
   def all
     @bookings = Booking.where({user_id: current_user.id})
   end
