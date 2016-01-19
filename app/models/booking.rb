@@ -8,4 +8,8 @@ class Booking < ActiveRecord::Base
 
   scope :unpaid, -> {where(:paid => nil)}
 
+  def self.unpaid_grouped_events
+    Booking.unpaid.group("event_id")
+  end
+
 end

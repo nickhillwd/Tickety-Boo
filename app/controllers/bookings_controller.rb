@@ -23,7 +23,7 @@ class BookingsController < ApplicationController
   end
 
   def shopping_cart
-    @unpaid_bookings = current_user.bookings.unpaid
+    @bookings = current_user.bookings.unpaid_grouped_events
   end
 
   def all
