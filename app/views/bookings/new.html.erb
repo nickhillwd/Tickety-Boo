@@ -17,14 +17,9 @@
     £<%= @event.event_price %>
     <br>
     <%= label "ticket_quantity", "Select Quantity" %>
-    <%= number_field "ticket_quantity", nil, :value => 1, in: 1..6 %>
+    <%= number_field "ticket_quantity", nil, :value => 1, in: 1..@ticket_range %>
     <br>
     <br>
-      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-              data-currency="gbp"
-              data-amount=<%= (@event.event_price)*100 %>
-              data-locale="auto">
-      </script>
+    <%= f.submit 'Add To Basket' %>
   <% end %>
  </div> 

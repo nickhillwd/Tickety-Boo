@@ -5,28 +5,17 @@ class BookingsController < ApplicationController
   def new
     @event = Event.find(params[:event_id])
     @booking = Booking.new
+    @ticket_range = (@event.tickets_left? > 6) ? 6 : @event.tickets_left?
   end
 
   def create
+
     new_booking = Booking.new(booking_params)
     if new_booking.event.sold_out?
       redirect_to root_path, alert: "Event Sold Out"
     end
     new_booking.save
   
-    @amount = ((new_booking.event.event_price)*100).to_i
-
-    customer = Stripe::Customer.create(
-      :email => params[:stripeEmail],
-      :source  => params[:stripeToken]
-    )
-
-    charge = Stripe::Charge.create(
-      :customer    => customer.id,
-      :amount      => @amount,
-      :description => 'Rails Stripe customer',
-      :currency    => 'gbp'
-    )
     @user = current_user
      redirect_to(root_path)
   end
