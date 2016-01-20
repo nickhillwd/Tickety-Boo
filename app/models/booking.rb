@@ -2,8 +2,8 @@ class Booking < ActiveRecord::Base
 
   require 'time'
 
-  belongs_to :event, dependent: :destroy
-  belongs_to :user, dependent: :destroy
+  belongs_to :event
+  belongs_to :user
   has_many :venues, :through => :event
   has_many :acts, :through => :event
   has_many :genres, :through => :event
