@@ -1,7 +1,8 @@
+
+<h1><%= current_user.email %>: Your Current Bookings</h1>
 <section class="row">
   <div class="grid grid-12">
     <div class="panel panel-primary">
-      <h1><%= current_user.email %>: Your Current Bookings</h1>
       <% @bookings.each do |booking| %>
         <%= link_to "#{booking.event.act.act_name}", act_path(booking.event.act.id) %>
         <br>

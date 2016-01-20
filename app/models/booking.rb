@@ -7,6 +7,7 @@ class Booking < ActiveRecord::Base
   has_many :genres, :through => :event
 
   scope :unpaid, -> {where(:paid => nil)}
+  scope :paid, -> {where(:paid => true)}
 
   def self.unpaid_grouped_events
     Booking.unpaid.group("event_id")

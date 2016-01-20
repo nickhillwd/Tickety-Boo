@@ -30,7 +30,8 @@ class BookingsController < ApplicationController
 
     end
     sum = @amounts.inject(:+)
-    @amount = (sum*100).to_i
+    @amount = sum.to_i
+    @stripe_amount = (sum*100).to_i
   end
 
   def stripe_checkout
@@ -40,7 +41,7 @@ class BookingsController < ApplicationController
       (booking.event.event_price * bookings.count[booking.event.id])
     end
     sum = amounts.inject(:+)
-    @amount = (sum*100).to_i
+    @stripe_amount = (sum*100).to_i
 
         customer = Stripe::Customer.create(
           :email => params[:stripeEmail],
@@ -49,16 +50,20 @@ class BookingsController < ApplicationController
 
         charge = Stripe::Charge.create(
           :customer    => customer.id,
-          :amount      => @amount,
+          :amount      => @stripe_amount,
           :description => 'Rails Stripe customer',
           :currency    => 'gbp'
         )
+
+    bookings.each do |paid_booking|
+      paid_booking.update({paid: true})
+    end
 
     redirect_to bookings_all_path
   end
 
   def all
-    @bookings = Booking.where({user_id: current_user.id})
+    @bookings = Booking.where({user_id: current_user.id}).paid
   end
 
   private
