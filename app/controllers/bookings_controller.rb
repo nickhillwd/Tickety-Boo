@@ -25,13 +25,15 @@ class BookingsController < ApplicationController
   def shopping_cart
     @bookings = current_user.bookings.unpaid_grouped_events
 
-    @amounts = @bookings.map do |booking|
-      (booking.event.event_price * @bookings.count[booking.event.id])
+    if @bookings != []
+      @amounts = @bookings.map do |booking|
+        (booking.event.event_price * @bookings.count[booking.event.id])
 
+      end
+      sum = @amounts.inject(:+)
+      @amount = sum.to_i
+      @stripe_amount = (sum*100).to_i
     end
-    sum = @amounts.inject(:+)
-    @amount = sum.to_i
-    @stripe_amount = (sum*100).to_i
   end
 
   def stripe_checkout
@@ -55,7 +57,8 @@ class BookingsController < ApplicationController
           :currency    => 'gbp'
         )
 
-    bookings.each do |paid_booking|
+    checkout_bookings = current_user.bookings.unpaid
+    checkout_bookings.each do |paid_booking|
       paid_booking.update({paid: true})
     end
 
