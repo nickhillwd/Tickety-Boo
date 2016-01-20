@@ -17,10 +17,8 @@ class Ability
     if user.role? :admin
       can :manage, :all
     else
-      can :read, [Event, Act, Venue, Booking]
-      can :create, Booking
-      can :update, Booking
-      can :all, Booking
+      can :read, [Event, Act, Venue]
+      can :manage, Booking, user_id: user.id
       #can :create, Comment
       #can :update, Comment
     end

@@ -66,7 +66,8 @@ class BookingsController < ApplicationController
   end
 
   def all
-    @bookings = Booking.where({user_id: current_user.id}).paid
+    # @bookings = Booking.where({user_id: current_user.id}).paid
+    @bookings = current_user.bookings_all_path.paid
   end
 
   private
