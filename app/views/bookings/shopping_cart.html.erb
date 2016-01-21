@@ -18,8 +18,10 @@
           </div> <!-- .cart-right -->
           <div class="cart-left">
             <p>Number of Tickets: <%= @bookings.count[booking.event_id] %></p>
-            <%= button_to("Add One Ticket", event_bookings_path(booking.event.id, :ticket_quantity => 1, booking:{:user_id => current_user.id, :event_id => booking.event.id}), method: 'post', data: {confirm: 'Add One More Ticket. Are you sure?!'} ) %>  
-            <br>
+            <% if @bookings.count[booking.event_id] < 6 %>
+              <%= button_to("Add One Ticket", event_bookings_path(booking.event.id, :ticket_quantity => 1, booking:{:user_id => current_user.id, :event_id => booking.event.id}), method: 'post', data: {confirm: 'Add One More Ticket. Are you sure?!'} ) %>
+            <% end %> 
+              <br>
             <%= button_to("Remove One Ticket", event_booking_path(booking.event.id, booking.id), method: :delete, data: {confirm: 'Remove One Ticket? Are you sure?!'} ) %>
             <br>
           </div> <!-- .cart-left -->

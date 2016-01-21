@@ -16,7 +16,7 @@ class Booking < ActiveRecord::Base
   end
 
   def expired?
-    (Time.now - 7200) > created_at
+    (Time.now - 100) > created_at
   end
   #7200 - 2 hours
 
