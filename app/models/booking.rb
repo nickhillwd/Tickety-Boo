@@ -18,6 +18,7 @@ class Booking < ActiveRecord::Base
   def expired?
     (Time.now - 7200) > created_at
   end
+  #7200 - 2 hours
 
   def self.two_hour_bookings
     checkout_bookings = Booking.unpaid

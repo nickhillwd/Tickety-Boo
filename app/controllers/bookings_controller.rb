@@ -9,7 +9,11 @@ class BookingsController < ApplicationController
   end
 
   def create
-    ticket_quantity = params[:ticket_quantity][0].to_i
+    if params[:ticket_quantity].empty?
+      ticket_quantity = 1
+    else
+      ticket_quantity = params[:ticket_quantity][0].to_i
+    end
     ticket_quantity.times do
       new_booking = Booking.new(booking_params)
       if new_booking.event.sold_out?
@@ -19,7 +23,7 @@ class BookingsController < ApplicationController
     end
   
     @user = current_user
-     redirect_to(root_path)
+     redirect_to(bookings_shopping_cart_path)
   end
 
   def shopping_cart
@@ -46,7 +50,7 @@ class BookingsController < ApplicationController
     @stripe_amount = (sum*100).to_i
 
         customer = Stripe::Customer.create(
-          :email => params[:stripeEmail],
+          :email => params[current_user.email],
           :source  => params[:stripeToken]
         )
 
@@ -67,8 +71,15 @@ class BookingsController < ApplicationController
 
   def all
     # @bookings = Booking.where({user_id: current_user.id}).paid
-    @bookings = current_user.bookings_all_path.paid
+    @bookings = current_user.bookings.paid
   end
+
+  def destroy
+      @user = current_user.id
+      booking = Booking.find(params[:id])
+      booking.destroy
+      redirect_to(bookings_shopping_cart_path)
+    end
 
   private
 
